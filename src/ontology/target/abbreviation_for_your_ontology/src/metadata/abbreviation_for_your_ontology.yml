@@ -1,0 +1,27 @@
+# PURL configuration for http://purl.obolibrary.org/obo/abbreviation_for_your_ontology
+
+idspace: ABBREVIATION_FOR_YOUR_ONTOLOGY
+base_url: /obo/abbreviation_for_your_ontology
+
+products:
+- abbreviation_for_your_ontology.owl: https://raw.githubusercontent.com/your_GitHub_user_name/name_of_repository/master/abbreviation_for_your_ontology.owl
+- abbreviation_for_your_ontology.obo: https://raw.githubusercontent.com/your_GitHub_user_name/name_of_repository/master/abbreviation_for_your_ontology.obo
+
+term_browser: ontobee
+example_terms:
+- ABBREVIATION_FOR_YOUR_ONTOLOGY_0000000
+
+entries:
+
+- prefix: /releases/
+  replacement: https://raw.githubusercontent.com/your_GitHub_user_name/name_of_repository/v
+
+- prefix: /tracker/
+  replacement: https://github.com/your_GitHub_user_name/name_of_repository/issues
+
+- prefix: /about/
+  replacement: http://www.ontobee.org/ontology/ABBREVIATION_FOR_YOUR_ONTOLOGY?iri=http://purl.obolibrary.org/obo/
+
+## generic fall-through, serve direct from github by default
+- prefix: /
+  replacement: https://raw.githubusercontent.com/your_GitHub_user_name/name_of_repository/master/
